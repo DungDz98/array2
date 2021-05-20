@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<input type="text" id="input" placeholder="Enter a word">
+<input type="button" value="Dịch" onclick="translation()">
+<p id="result"></p>
+<script>
+    function translation() {
+        let vn = ['bắt đầu', 'kết thúc', 'thành công', 'kĩ năng', 'thất bại'];
+        let uk = ['start', 'finish', 'success', 'skill', 'fail'];
+        let word = document.getElementById('input').value;
+        for (let i = 0; i < uk.length; i++) {
+            if (uk[i] == word) {
+                document.getElementById('result').innerHTML = vn[i];
+                break;
+            } else {
+                document.getElementById('result').innerHTML = 'Không có trong từ điển';
+            }
+        }
+    }
+</script>
+</body>
+</html>

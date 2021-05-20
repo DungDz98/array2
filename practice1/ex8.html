@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex8</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    do {
+        let a = parseInt(prompt('Nhap vao cac phan tu '));
+        if (!isNaN(a)) arr.push(a);
+    } while (arr.length < 10);
+    let b;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                b = arr[i];
+                arr[i] = arr[j];
+                arr[j] = b;
+            }
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>

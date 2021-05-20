@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex9</title>
+</head>
+<body>
+<script>
+  let arr1 = [];
+  let arr2 = [];
+  do {
+    let a = prompt('Nhap vao cac phan tu cua mang 1: ');
+    arr1.push(a);
+  } while (arr1.length < 10);
+  do {
+    let b = prompt('Nhap vao cac phan tu cua mang 2: ');
+    arr2.push(b);
+  } while (arr2.length < 10);
+  let arr3 = arr1.concat(arr2);
+  document.write(arr3);
+
+
+</script>
+</body>
+</html>

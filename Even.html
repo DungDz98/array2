@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let nums = prompt('Nhap day so vao day').toString();
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i-1]%2 == 0 && nums[i]%2 == 0) {
+      result.push('-', nums[i]);
+    } else {
+      result.push(nums[i]);
+    }
+  }
+  document.write(result.join(''));
+</script>
+</body>
+</html>

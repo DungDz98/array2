@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex6</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  do {
+    let a = parseInt(prompt('Nhap vao cac phan tu '));
+    if (!isNaN(a)) arr.push(a);
+  } while (arr.length < 10);
+  console.log(arr);
+  let input = parseInt(prompt('Nhap so ban muon kiem tra: '));
+  if (arr.indexOf(input) !== -1) alert(input + ' is in the array'); else alert(input + ' is not in the array');
+
+</script>
+</body>
+</html>

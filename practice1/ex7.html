@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex7</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    do {
+        let a = parseInt(prompt('Nhap vao cac phan tu '));
+        if (!isNaN(a)) arr.push(a);
+    } while (arr.length < 5);
+    console.log(arr);
+    let input = parseInt(prompt('Nhap so ban muon kiem tra: '));
+    if (arr.indexOf(input) !== -1) {
+        alert(input + ' is in the array');
+        let m = arr.indexOf(input);
+        console.log(m);
+        for (let i = m; i < arr.length; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr.pop();
+    } else alert(input + ' is not in the array');
+
+    console.log(arr);
+
+</script>
+</body>
+</html>

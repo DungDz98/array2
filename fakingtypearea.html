@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FakingTypeArea</title>
+</head>
+<body>
+<h1 style="text-align: center">Type anything slowly</h1>
+<form style="text-align: center">
+    <textarea name="txt" id="txt" cols="30" rows="10" onkeydown="jokewithkeyboard()"></textarea>
+</form>
+<script>
+    let str = "";
+    let joke = ['K', 'H', 'Ô', 'N', 'G', ' ', 'L', 'À', 'M', ' ', 'Đ', 'Ò', 'I', ' ', 'C', 'Ó', ' ', 'Ă', 'N'];
+    function jokewithkeyboard() {
+        let input = document.getElementById('txt').value;
+        if (input.length > 0) {
+            for (let i = 0; i < input.length; i++) {
+                str += joke[i];
+                if (i === 19) {
+                    document.getElementById('txt').value = '';
+                    str = "";
+                }
+            }
+        }
+        document.getElementById('txt').value = str;
+        str = "";
+        setTimeout("jokewithkeyboard()", 10);
+    }
+</script>
+</body>
+</html>

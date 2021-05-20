@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tictactoe</title>
+</head>
+<body>
+<h3>Tic tac toe</h3>
+<div id="xo"></div>
+<br><br>
+<input type="button" value="Player1" onclick="fight1()">
+<input type="button" value="Player2" onclick="fight2()">
+<script>
+    let b = document.getElementById('xo');
+    let board = [];
+    let data = "";
+    for (let i = 0; i < 3; i++) {
+        board[i] = ['*', '*', '*'];
+        data += "<br>";
+        for (let j = 0; j < 3; j++) {
+            data += board[i][j] + "&nbsp;&nbsp";
+        }
+    }
+    b.innerHTML = data;
+
+    function fight1() {
+        let positionX = prompt('Nhap so dong');
+        let positionY = prompt('Nhap so cot');
+        if (board[positionX][positionY] != "*") {
+            alert("Vi tri da duoc danh!");
+            positionX = prompt('Nhap so dong');
+            positionY = prompt('Nhap so cot');
+        }
+        data = "";
+        board[positionX][positionY] = "x";
+        for (let i = 0; i < 3; i++) {
+            data += "<br>";
+            for (let j = 0; j < 3; j++) {
+                data += board[i][j] + "&nbsp;&nbsp";
+            }
+        }
+        b.innerHTML = data;
+    }
+
+    function fight2() {
+        let positionX = prompt('Nhap so dong');
+        let positionY = prompt('Nhap so cot');
+        if (board[positionX][positionY] != "*") {
+            alert("Vi tri da duoc danh!");
+            positionX = prompt('Nhap so dong');
+            positionY = prompt('Nhap so cot');
+        }
+        data = "";
+        board[positionX][positionY] = "o";
+        for (let i = 0; i < 3; i++) {
+            data += "<br>";
+            for (let j = 0; j < 3; j++) {
+                data += board[i][j] + "&nbsp;&nbsp";
+            }
+        }
+        b.innerHTML = data;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex2</title>
+</head>
+<body>
+<script>
+  let arr = [1, 3, 6, 10, 11, 20, 30, 50, 54, 98];
+  let max = arr[0];
+  let count = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+      count++;
+    }
+  }
+  document.write('Gia tri lon nhat trong mang la: ' + max + ' tai vi tri ' + count);
+</script>
+</body>
+</html>
